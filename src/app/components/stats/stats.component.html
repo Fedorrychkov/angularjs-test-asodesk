@@ -1,0 +1,54 @@
+<section class="stats">
+  <app-loader ng-if="!$ctrl.isLoaded"></app-loader>
+  <table ng-if="$ctrl.isLoaded" datatable="ng" dt-options="$ctrl.dtOptions" dt-column-defs="$ctrl.dtColumnDefs" class="row-border hover datatable">
+      <thead>
+      <tr>
+        <th>
+          <input type="checkbox" ng-model="$ctrl.allChecked" ng-click="$ctrl.checkAll($ctrl.allChecked)">
+        </th>
+        <th>keyword</th>
+        <th></th>
+        <th></th>
+        <th class="center">Traffic Score</th>
+        <th class="center">Rank</th>
+        <th class="center">Total apps</th>
+        <th class="center">Color</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="stat in $ctrl.stats">
+        <td>
+          <input type="checkbox" ng-model="stat.checked" ng-click="$ctrl.check(stat)">
+        </td>
+        <td>
+          {{stat.keyword}}
+        </td>
+        <td>
+          <a ui-sref="explore({id: stat.id})">Explore</a>
+        </td>
+        <td>
+          <button ng-click="$ctrl.openPopup(stat)">Show(<span>{{stat.suggestions_count}}</span>)</button>
+        </td>
+        <td class="center">
+          {{stat.searchads_popularity}}
+        </td>
+        <td class="center">
+          <span class="current-position">{{stat.position_info.position}}</span>
+          <span ng-if="stat.position_info.change !== 0 && stat.position_info.change !== null" class="change-position" ng-class="stat.position_info.change > 0 ? 'positive' : 'negative'">({{stat.position_info.change}})</span>
+        </td>
+        <td class="center">
+          {{stat.total_apps}}
+        </td>
+        <td class="center">
+          <div class="color" ng-class="'color-' + stat.color"></div>
+        </td>
+        <td>
+          <button ng-click="$ctrl.delete(stat.id)"><i class="icon-trash"></i></button>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <app-popup stat="$ctrl.openedStat" opened="$ctrl.popupIsOpen"/>
+</section>
