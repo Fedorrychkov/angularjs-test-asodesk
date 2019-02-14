@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+
+.popup {
+  background-color: #fff;
+  min-width: 320px;
+  padding: 24px;
+  box-shadow: $card-shadow;
+  position: relative;
+  border-radius: 4px;
+  z-index: 10;
+
+  &-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    i {
+      font-size: 20px;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .15);
+    z-index: 9;
+  }
+}
+
+.popup-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}

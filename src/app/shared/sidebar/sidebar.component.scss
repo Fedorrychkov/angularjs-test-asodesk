@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+.sidebar {
+  min-width: $sidebar_xl;
+  min-height: calc(100vh - #{$header-height});
+  background-color: #f3f3f3;
+  position: relative;
+  z-index: 3;
+  transition: all .35s;
+
+  @media (max-width: 1200px) {
+    min-width: $sidebar_sm;
+  }
+}

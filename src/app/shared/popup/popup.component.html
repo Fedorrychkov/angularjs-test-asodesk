@@ -1,0 +1,10 @@
+<div class="popup-section" ng-show="$ctrl.opened" >
+  <div class="popup">
+    <div class="popup-close" ng-click="$ctrl.close()"><i class="icon-plus"></i></div>
+    <div class="popup__head"></div>
+    <div class="popup__content">
+      <p>keyword: <br/> {{$ctrl.stat.keyword}}</p>
+    </div>
+  </div>
+  <div class="popup__overlay" ng-click="$ctrl.close()"></div>
+</div>

@@ -1,0 +1,7 @@
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item" ng-repeat="item in $ctrl.nav track by item.name">
+      <a class="nav__link" ui-sref="{{item.name}}">{{item.title}}</a>
+    </li>
+  </ul>
+</nav>
