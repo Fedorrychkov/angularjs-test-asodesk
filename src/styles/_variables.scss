@@ -1,0 +1,81 @@
+// sizes
+
+$screen-sm: 540px;
+$screen-md: 720px;
+$screen-lg: 960px;
+$screen-xl: 1140px;
+
+$header-height: 60px;
+$sidebar_xl: 320px;
+$sidebar_sm: 80px;
+
+$mobile-up:  '(min-width: 576px)';
+$tab-up:  '(min-width: 768px)';
+$desktop-up:  '(min-width: 992px)';
+$mobile-down:  '(max-width: 576px)';
+$tab-down:  '(max-width: 768px)';
+$desktop-down:  '(max-width: 992px)';
+
+$box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+$card-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.05);
+
+$scrim-index: 99;
+$slide-nav-index: 111;
+
+// Font size
+$font-mc: 8px;
+$font-sm: 12px;
+$font-md: 16px;
+$font-lg: 24px;
+$font-xl: 32px;
+
+// Offsets
+$offset-mc: 6px;
+$offset-sm: 8px;
+$offset-md: 16px;
+$offset-lg: 32px;
+$offset-xl: 64px;
+
+// layout width
+    // Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+$white-color:               #ffffff;
+$black-color:               #000000;
+$medium-color:              #4F4F4F;
+$darkest-color:             #2e363e;
+$darker-color:              #4a5159;
+$dark-color:                #6b7784;
+$gray-color:                #8f9ba9;
+$light-color:               #bac4cf;
+$lighter-color:             #d3dbe3;
+$lightest-color:            #e4ebf3;
+$smoke-color:               #f3f7fc;
+$grayer-color:              #f2f2f2;
+$ligher-color:              #c4c4c4;
+
+$blue-bg:                   #0171BF;
+
+
+
+// colors
+
+$common-title-color:        #4F4F4F;
+$light-color:               #F2F2F2;
+$active-color:              #00BCD4;
+
+$animation-fast:            .15s;
+$animation-medium:          .3s;
+$animation-slow:            .45s;
