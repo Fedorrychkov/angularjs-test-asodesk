@@ -1,8 +1,12 @@
 @import '../../../styles/variables';
 
+app-sidebar {
+  min-height: calc(100vh - #{$header-height});
+}
+
 .sidebar {
   min-width: $sidebar_xl;
-  min-height: calc(100vh - #{$header-height});
+  height: 100%;
   background-color: #f3f3f3;
   position: relative;
   z-index: 3;
